@@ -1,0 +1,19 @@
+{{title}}
+<!--Centriamo la mappa alle nostre coordinate-->
+<google-map [center]="center">  
+  <!--Mettiamo un marker alle nostre coordinate-->
+  <map-marker [position]="position" [label]="label" [title]="title">
+  </map-marker>
+
+  <map-circle [center]="position"
+              [radius]="50"
+              [options] = 'circleOptions'>
+  </map-circle>
+  <map-circle [center]="wer"
+              [radius]="100"
+              [options] = 'circleOption2'>
+  </map-circle>
+  <button onclick="redColor()">Red</button>
+  <button onclick="greenColor()">Green</button>
+  <button onclick="blueColor()">Blue</button>
+</google-map>
