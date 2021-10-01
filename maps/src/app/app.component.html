@@ -2,9 +2,23 @@
 <!--Centriamo la mappa alle nostre coordinate-->
 <google-map [center]="center">  
   <!--Mettiamo un marker alle nostre coordinate-->
-  <map-marker [position]="position" [label]="label" [title]="title">
-  </map-marker>
-
+  <map-marker [position]="position" 
+              [label]="label" 
+              [title]="title"
+              [options] = "markerOptions">
+ </map-marker>
+ <map-marker [position]="position" 
+              [label]="label" 
+              [title]="title"
+              [options] = "markerOptions">
+ </map-marker>
+ <map-polygon [paths]="vertices">
+</map-polygon>
+<map-polygon [paths]="vertices2"
+             [options] = 'colorOption'
+>
+              
+</map-polygon>
   <map-circle [center]="position"
               [radius]="50"
               [options] = 'circleOptions'>
@@ -13,7 +27,7 @@
               [radius]="100"
               [options] = 'circleOption2'>
   </map-circle>
-  <button onclick="redColor()">Red</button>
-  <button onclick="greenColor()">Green</button>
-  <button onclick="blueColor()">Blue</button>
+  <button (click)="redColor()">Red</button>
+  <button (click)="greenColor()">Green</button>
+  <button (click)="blueColor()">Blue</button>
 </google-map>
