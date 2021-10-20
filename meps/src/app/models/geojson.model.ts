@@ -4,15 +4,14 @@ export class Geometry {
 }
 
 export class GeoJson {
-        public type: string;
-        public geometry: Geometry;
-        public properties?: any
+    public type: string;
+    public geometry: Geometry;
+    public properties?: any
 }
 
-export class GeoFeatureCollection
-{
+export class GeoFeatureCollection {
     public type: string;
-    public features : GeoJson[];
+    public features: GeoJson[];
 }
 
 
@@ -770,5 +769,40 @@ export const GEOJSON = {
                             ]
                         ]
                 }
-            }]
+            },
+
+
+            {
+                "type": "Feature",
+                "properties": { "id": 2 },
+                "geometry":
+                {
+                    "type": "Polygon", "coordinates":
+                        [
+                            [
+                                [ 
+                                    9.263205391147174,
+                                    45.57893784576123
+                                ],
+                                [
+                                    9.26383136840639,
+                                    45.57728070633982
+                                ],
+                                [
+                                    9.261649744691107,
+                                    45.57694233154492
+                                ],
+                                [
+                                    9.261005174047956,
+                                    45.57836522719784
+                                ],
+                                [
+                                    9.263205391147174,
+                                    45.57893784576123
+                                ]
+                            ]
+                        ]
+                }
+            }
+        ]
 }
